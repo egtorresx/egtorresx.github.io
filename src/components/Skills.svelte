@@ -2,6 +2,8 @@
   import { client } from "$lib/graphql-client";
   import { gql } from "graphql-request";
   import Skill from "./Skill.svelte";
+  import Skeleton from "../components/Skeleton.svelte";
+  import Error from "../components/Error.svelte";
 
   let query = gql`
     {
@@ -24,64 +26,38 @@
 </script>
 
 <!-- Skills and interest section -->
-<div class="container">
-  <div class="sections">
-    <h2 class="section-title">Habilidades</h2>
-    {#await skills}
-      <div>Cargando...</div>
-    {:then}
-      {#each acquiredSkills as skill}
-        <Skill
-          experience={skill.experience}
-          title={skill.title}
-          description={skill.description}
-        />
-      {/each}
-    {:catch error}
-      <div>No se puede mostrar por el momento sección Habilidades</div>
-    {/await}
-  </div>
-  <div class="sections">
-    <h2 class="section-title">Actualmente aprendiendo</h2>
-    {#each learningSkills as skill}
-      <Skill
-        experience={skill.experience}
-        title={skill.title}
-        description={skill.description}
-      />
-    {/each}
-  </div>
+<div class="mt-10">
+  {#await skills}
+    <Skeleton />
+  {:then}
+    <div class="flex flex-col md:flex-row">
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold">Habilidades</h2>
+        {#each acquiredSkills as skill}
+          <div class="my-5">
+            <Skill
+              experience={skill.experience}
+              title={skill.title}
+              description={skill.description}
+            />
+          </div>
+        {/each}
+      </div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold">Actualmente aprendiendo</h2>
+        {#each learningSkills as skill}
+          <div class="my-5">
+            <Skill
+              experience={skill.experience}
+              title={skill.title}
+              description={skill.description}
+            />
+          </div>
+        {/each}
+      </div>
+    </div>
+  {:catch error}
+    <Error>No se puede mostrar por el momento sección Habilidades {error}</Error
+    >
+  {/await}
 </div>
-
-<style>
-  .sections {
-    vertical-align: top;
-    display: inline-block;
-    width: 49.7%;
-    height: 50px;
-  }
-
-  .section-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-
-  @media (max-width: 768px) {
-    .sections {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-      float: left;
-    }
-  }
-
-  @media (max-width: 425px) {
-    .sections {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-      float: left;
-    }
-  }
-</style>

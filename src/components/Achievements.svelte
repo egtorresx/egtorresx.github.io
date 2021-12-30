@@ -2,6 +2,8 @@
   import { client } from "$lib/graphql-client";
   import { gql } from "graphql-request";
   import Achievement from "./Achievement.svelte";
+  import Skeleton from "../components/Skeleton.svelte";
+  import Error from "../components/Error.svelte";
 
   let query = gql`
     {
@@ -19,39 +21,23 @@
   $: client.request(query).then((data) => (achievements = data.achievements));
 </script>
 
-<div class="container cards">
-  {#await achievements}
-    <div>Cargando...</div>
-  {:then}
+{#await achievements}
+  <div class="mt-10">
+    <Skeleton />
+  </div>
+{:then}
+  <div class="flex flex-col p-5 justify-evenly md:flex-row">
     {#each achievements as achievement}
-      <Achievement
-        before={achievement.prefix}
-        quantity={achievement.quantity}
-        title={achievement.title}
-        description={achievement.description}
-      />
+      <div class="bg-blue-300 flex-1 m-3 p-10 rounded-lg shadow-2xl">
+        <Achievement
+          before={achievement.prefix}
+          quantity={achievement.quantity}
+          title={achievement.title}
+          description={achievement.description}
+        />
+      </div>
     {/each}
-  {:catch error}
-    <div>No se puede mostrar por el momento sección Logros</div>
-  {/await}
-</div>
-
-<style>
-  .cards {
-    max-width: 1120px;
-    display: block;
-    margin-top: 450px;
-  }
-
-  @media (max-width: 1024px) {
-    .cards {
-      margin-top: 480px;
-    }
-  }
-
-  @media (max-width: 1019px) {
-    .cards {
-      margin-top: 500px;
-    }
-  }
-</style>
+  </div>
+{:catch error}
+  <Error>No se puede mostrar por el momento sección Logros {error}</Error>
+{/await}
