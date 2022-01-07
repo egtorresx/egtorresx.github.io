@@ -6,13 +6,11 @@
   import Footer from "../components/Footer.svelte";
 </script>
 
-<main class="container mx-auto px-10 pt-2 md:pt-10">
-  <Hero />
-  <Skills />
-  <Achievements />
-  <Timeline />
-  <Footer />
-</main>
+<Hero />
+<Skills />
+<Achievements />
+<Timeline />
+<Footer />
 
 <svelte:head>
   <title>Edison Torres | Desarrollador de Software</title>
