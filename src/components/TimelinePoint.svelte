@@ -1,5 +1,8 @@
 <script lang="ts">
-  export let description: string, startDate: string, endDate: string;
+  export let description: string,
+    startDate: string,
+    endDate: string,
+    url: string;
 
   function formatDate(d: string) {
     if (!d) return "actualidad";
@@ -12,7 +15,15 @@
 
 <div>
   <p class="text-xl text-left">
-    <span class="mr-2 text-xl text-blue-900 font">{description}</span>
+    {#if url}
+      <a
+        class="mr-2 text-xl text-blue-900 font hover:underline"
+        href={url}
+        target="_blank">{description}</a
+      >
+    {:else}
+      <span class="mr-2 text-xl text-blue-900 font">{description}</span>
+    {/if}
     <span class="hidden md:inline-block text-gray-700"
       >{formatDate(startDate)} - {formatDate(endDate)}</span
     >

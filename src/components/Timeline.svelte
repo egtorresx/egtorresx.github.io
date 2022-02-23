@@ -12,6 +12,7 @@
         standOutLine
         startDate
         endDate
+        url
       }
     }
   `;
@@ -37,6 +38,7 @@
             description={job.description}
             startDate={job.startDate}
             endDate={job.endDate}
+            url={job.url}
           />
         </li>
       {/each}
