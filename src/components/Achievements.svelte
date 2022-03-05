@@ -26,9 +26,9 @@
     <Skeleton />
   </div>
 {:then}
-  <div class="flex flex-col p-5 justify-evenly md:flex-row">
+  <div class="flex flex-col justify-evenly md:flex-row">
     {#each achievements as achievement}
-      <div class="bg-blue-300 flex-1 m-3 p-10 rounded-lg shadow-2xl">
+      <div class="flex-1 mr-5 mb-5 md:mb-0">
         <Achievement
           before={achievement.prefix}
           quantity={achievement.quantity}
