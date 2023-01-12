@@ -19,7 +19,8 @@
       <a
         class="mr-2 text-xl text-blue-900 font hover:underline"
         href={url}
-        target="_blank">{description}</a
+        target="_blank"
+        rel="noreferrer">{description}</a
       >
     {:else}
       <span class="mr-2 text-xl text-blue-900 font">{description}</span>

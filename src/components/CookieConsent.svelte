@@ -23,7 +23,8 @@
       <a
         class="font-bold text-sm md:text-lg"
         href="https://www.cookiesandyou.com/"
-        target="_blank">Aprende más</a
+        target="_blank"
+        rel="noreferrer">Aprende más</a
       >
     </span>
     <div>
