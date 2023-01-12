@@ -6,123 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Edison Torres Desarrollo Software" />
 		<meta name="robots" content="index, follow" />				
-		<title>Edison Torres | Desarrollador de Software</title>
-
-		
-
-		<link rel="modulepreload" href="/_app/start-c7081ea6.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-d11f9b58.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-f9d27130.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-e339671d.js">
-		<link rel="stylesheet" href="/_app/assets/start-d5b4de3e.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-cadd708a.css">
-
-		<script type="module">
-			import { start } from "/_app/start-c7081ea6.js";
-			start({
-				target: document.querySelector("#svelte"),
-				paths: {"base":"","assets":""},
-				session: {},
-				host: location.host,
-				route: true,
-				spa: false,
-				trailing_slash: "never",
-				hydrate: {
-					status: 200,
-					error: null,
-					nodes: [
-						import("/_app/pages/__layout.svelte-f9d27130.js"),
-						import("/_app/pages/index.svelte-e339671d.js")
-					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "\u002F",
-						query: new URLSearchParams(""),
-						params: {}
-					}
-				}
-			});
-		</script>
+		<meta http-equiv="content-security-policy" content="">
+		<link rel="modulepreload" href="./internal/immutable/start-08ba2e52.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-5759e802.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-05760a49.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-3c39236f.js">
 	</head>
 	<body>
 		<div id="svelte">
+		<script type="module" data-sveltekit-hydrate="45h">
+			import { start } from "./internal/immutable/start-08ba2e52.js";
 
-
-<main class="container mx-auto px-10 pt-2 md:pt-10"><div class="flex flex-col items-center text-center"><div class="flex flex-col md:flex-row mb-5 items-center"><h1 class="text-4xl mb-4 md:mr-6 md:text-6xl"><span class="font-bold">Edison</span>
-      Torres
-    </h1>
-    <span class="text-2xl bg-blue-200 text-blue-900 px-4 py-2 rounded-lg">Desarrollador de Software</span></div>
-  <div class="flex mb-4"><a href="http://twitter.com/edisont" class="mr-2"><svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M512 97.248C492.96 105.6 472.672 111.136 451.52 113.824C473.28 100.832
-      489.888 80.416 497.696 55.808C477.408 67.904 455.008 76.448 431.136
-      81.216C411.872 60.704 384.416 48 354.464 48C296.352 48 249.568 95.168
-      249.568 152.992C249.568 161.312 250.272 169.312 252 176.928C164.736
-      172.672 87.52 130.848 35.648 67.136C26.592 82.848 21.28 100.832 21.28
-      120.192C21.28 156.544 40 188.768 67.904 207.424C51.04 207.104 34.496
-      202.208 20.48 194.496C20.48 194.816 20.48 195.232 20.48 195.648C20.48
-      246.656 56.864 289.024 104.576 298.784C96.032 301.12 86.72 302.24 77.056
-      302.24C70.336 302.24 63.552 301.856 57.184 300.448C70.784 342.016 109.376
-      372.576 155.264 373.568C119.552 401.504 74.208 418.336 25.12
-      418.336C16.512 418.336 8.256 417.952 0 416.896C46.496 446.88 101.6 464
-      161.024 464C354.176 464 459.776 304 459.776 165.312C459.776 160.672
-      459.616 156.192 459.392 151.744C480.224 136.96 497.728 118.496 512 97.248Z" fill="#04143A"></path></g><defs><clipPath id="clip0"><rect width="512" height="512" fill="white"></rect></clipPath></defs></svg></a>
-    <a href="https://github.com/egtorresx/"><svg width="24" height="24" viewBox="0 0 512 492" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M256 0.666626C114.56 0.666626 0 113.307 0 252.229C0 363.397 73.344
-    457.669 175.04 490.907C187.84 493.275 192.533 485.488 192.533
-    478.811C192.533 472.837 192.32 457.008 192.213 436.037C121.003 451.205
-    105.984 402.288 105.984 402.288C94.336 373.253 77.504 365.488 77.504
-    365.488C54.3147 349.893 79.296 350.213 79.296 350.213C105.003 351.963
-    118.507 376.133 118.507 376.133C141.333 414.597 178.432 403.483 193.067
-    397.061C195.371 380.784 201.963 369.712 209.28 363.419C152.427 357.125
-    92.672 335.493 92.672 239.109C92.672 211.653 102.592 189.211 119.019
-    171.611C116.139 165.253 107.499 139.675 121.259 105.029C121.259 105.029
-    142.699 98.288 191.659 130.821C212.139 125.232 233.899 122.459 255.659
-    122.331C277.419 122.459 299.179 125.232 319.659 130.821C368.299 98.288
-    389.739 105.029 389.739 105.029C403.499 139.675 394.859 165.253 392.299
-    171.611C408.619 189.211 418.539 211.653 418.539 239.109C418.539 335.749
-    358.699 357.019 301.739 363.205C310.699 370.757 319.019 386.181 319.019
-    409.755C319.019 443.419 318.699 470.469 318.699 478.64C318.699 485.232
-    323.179 493.104 336.299 490.587C438.72 457.563 512 363.227 512 252.229C512
-    113.307 397.376 0.666626 256 0.666626V0.666626Z" fill="#04143A"></path></svg></a></div>
-  <p class="text-2xl md:text-3xl bg-blue-200 px-6 py-4 rounded-lg md:w-9/12"><strong class="text-blue-900">Desarrollo</strong>
-    y diseño de
-    <strong class="text-blue-900">Software</strong>, tengo experiencia en las
-    areas académica y financiera
-  </p></div>
-
-<div class="mt-10">
-    <div class="border shadow rounded-md p-4 w-full mx-auto"><div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-6 py-1"><div class="h-2 bg-gray-200 rounded"></div>
-      <div class="space-y-3"><div class="grid grid-cols-3 gap-4"><div class="h-2 bg-gray-200 rounded col-span-2"></div>
-          <div class="h-2 bg-gray-200 rounded col-span-1"></div></div>
-        <div class="h-2 bg-gray-200 rounded"></div></div></div>
-    <div class="flex-1 space-y-6 py-1"><div class="h-2 bg-gray-200 rounded"></div>
-      <div class="space-y-3"><div class="grid grid-cols-3 gap-4"><div class="h-2 bg-gray-200 rounded col-span-2"></div>
-          <div class="h-2 bg-gray-200 rounded col-span-1"></div></div>
-        <div class="h-2 bg-gray-200 rounded"></div></div></div></div></div>
-  </div>
-
-  <div class="flex flex-col justify-evenly md:flex-row"></div>
-
-<div class="mt-10"><h2 class="text-2xl font-bold mb-4">Experiencia Laboral</h2>
-  
-    <ul class="steps steps-vertical lg:steps-horizontal"></ul>
-  </div>
-<footer class="mt-10 text-gray-500 w-full bottom-0 left-0 text-sm md:text-md"><span class="">Diseño de <a href="https://newtodesign.com/">New to design</a>
-    Diseñado por
-    <a href="https://dribbble.com/shots/4342703-Minimal-resume-freebie-for-junior-self-taught-people">Nicolas Meuzard
-    </a>
-    Iconos diseñados por
-    <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect
-    </a>
-    de
-    <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></span></footer>
-
-
-  <div class="bg-blue-300 text-blue-900 fixed bottom-0 right-0 w-full md:px-10 md:py-3 px-2 py-1 flex justify-between items-center"><span class="text-sm md:text-lg flex-1">¿Acepta el uso cookies para asegurarse que tenga la mejor experiencia en
-      este sitio web?
-      <a class="font-bold text-sm md:text-lg" href="https://www.cookiesandyou.com/" target="_blank">Aprende más</a></span>
-    <div><button class="btn btn-error btn-sm md:btn-md">No</button>
-      <button class="btn btn-success btn-sm md:btn-md">Si</button></div></div>
-  </main>
-
-</div>
+			start({
+				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
+				version: "1673564056358"
+			});
+		</script></div>
 	</body>
 </html>
