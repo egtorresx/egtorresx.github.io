@@ -2,27 +2,37 @@
 <html lang="es" data-theme="light">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Edison Torres Desarrollo Software" />
 		<meta name="robots" content="index, follow" />				
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="./internal/immutable/start-08ba2e52.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index-5759e802.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-05760a49.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index-3c39236f.js">
+		
+		<link rel="modulepreload" href="./internal/immutable/entry/start.027278dd.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/scheduler.5e1763d8.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.debbfd4d.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/paths.85e11cdf.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.54e161e4.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index.66611e00.js">
 	</head>
 	<body>
 		<div id="svelte">
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "./internal/immutable/start-08ba2e52.js";
+			<script>
+				{
+					__sveltekit_1w61urc = {
+						assets: "/sveltekit-github-pages",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1673564056358"
-			});
-		</script></div>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./internal/immutable/entry/start.027278dd.js"),
+						import("./internal/immutable/entry/app.54e161e4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
