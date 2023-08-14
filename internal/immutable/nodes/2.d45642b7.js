@@ -1,31 +1,31 @@
-import{i as Ct,h as wt,j as xe,k as St,s as ee,n as U,e as Rt,u as Lt,g as $t,f as Pt}from"../chunks/scheduler.5e1763d8.js";import{p as ye,t as P,b as _e,d as $,S as te,i as ne,B as oe,C as ae,j as O,f as E,k as _,a as L,y as N,g as k,s as B,r as J,h as C,x as ue,c as M,u as Q,v as X,w as W,m as j,n as H,o as K,D as ke,e as We,A as Ft}from"../chunks/index.66611e00.js";function Bt(t,e){for(var n=0;n<e.length;n++){const i=e[n];if(typeof i!="string"&&!Array.isArray(i)){for(const r in i)if(r!=="default"&&!(r in t)){const s=Object.getOwnPropertyDescriptor(i,r);s&&Object.defineProperty(t,r,s.get?s:{enumerable:!0,get:()=>i[r]})}}}return Object.freeze(Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}))}function pe(t,e){const n=e.token={};function i(r,s,o,a){if(e.token!==n)return;e.resolved=a;let l=e.ctx;o!==void 0&&(l=l.slice(),l[o]=a);const u=r&&(e.current=r)(l);let d=!1;e.block&&(e.blocks?e.blocks.forEach((m,h)=>{h!==s&&m&&(ye(),P(m,1,1,()=>{e.blocks[h]===m&&(e.blocks[h]=null)}),_e())}):e.block.d(1),u.c(),$(u,1),u.m(e.mount(),e.anchor),d=!0),e.block=u,e.blocks&&(e.blocks[s]=u),d&&St()}if(Ct(t)){const r=wt();if(t.then(s=>{xe(r),i(e.then,1,e.value,s),xe(null)},s=>{if(xe(r),i(e.catch,2,e.error,s),xe(null),!e.hasCatch)throw s}),e.current!==e.pending)return i(e.pending,0),!0}else{if(e.current!==e.then)return i(e.then,1,e.value,t),!0;e.resolved=t}}function je(t,e,n){const i=e.slice(),{resolved:r}=t;t.current===t.then&&(i[t.value]=r),t.current===t.catch&&(i[t.error]=r),t.block.p(i,n)}function le(t){return(t==null?void 0:t.length)!==void 0?t:Array.from(t)}function Mt(t){let e,n;return{c(){e=oe("svg"),n=oe("path"),this.h()},l(i){e=ae(i,"svg",{width:!0,height:!0,viewBox:!0,fill:!0,xmlns:!0});var r=O(e);n=ae(r,"path",{d:!0,fill:!0}),O(n).forEach(E),r.forEach(E),this.h()},h(){_(n,"d",`M256 0.666626C114.56 0.666626 0 113.307 0 252.229C0 363.397 73.344\r
-    457.669 175.04 490.907C187.84 493.275 192.533 485.488 192.533\r
-    478.811C192.533 472.837 192.32 457.008 192.213 436.037C121.003 451.205\r
-    105.984 402.288 105.984 402.288C94.336 373.253 77.504 365.488 77.504\r
-    365.488C54.3147 349.893 79.296 350.213 79.296 350.213C105.003 351.963\r
-    118.507 376.133 118.507 376.133C141.333 414.597 178.432 403.483 193.067\r
-    397.061C195.371 380.784 201.963 369.712 209.28 363.419C152.427 357.125\r
-    92.672 335.493 92.672 239.109C92.672 211.653 102.592 189.211 119.019\r
-    171.611C116.139 165.253 107.499 139.675 121.259 105.029C121.259 105.029\r
-    142.699 98.288 191.659 130.821C212.139 125.232 233.899 122.459 255.659\r
-    122.331C277.419 122.459 299.179 125.232 319.659 130.821C368.299 98.288\r
-    389.739 105.029 389.739 105.029C403.499 139.675 394.859 165.253 392.299\r
-    171.611C408.619 189.211 418.539 211.653 418.539 239.109C418.539 335.749\r
-    358.699 357.019 301.739 363.205C310.699 370.757 319.019 386.181 319.019\r
-    409.755C319.019 443.419 318.699 470.469 318.699 478.64C318.699 485.232\r
-    323.179 493.104 336.299 490.587C438.72 457.563 512 363.227 512 252.229C512\r
-    113.307 397.376 0.666626 256 0.666626V0.666626Z`),_(n,"fill","#04143A"),_(e,"width",t[0]),_(e,"height",t[1]),_(e,"viewBox","0 0 512 492"),_(e,"fill","none"),_(e,"xmlns","http://www.w3.org/2000/svg")},m(i,r){L(i,e,r),N(e,n)},p(i,[r]){r&1&&_(e,"width",i[0]),r&2&&_(e,"height",i[1])},i:U,o:U,d(i){i&&E(e)}}}function Ut(t,e,n){let{width:i,height:r}=e;return t.$$set=s=>{"width"in s&&n(0,i=s.width),"height"in s&&n(1,r=s.height)},[i,r]}class Vt extends te{constructor(e){super(),ne(this,e,Ut,Mt,ee,{width:0,height:1})}}function qt(t){let e,n,i,r,s,o;return{c(){e=oe("svg"),n=oe("g"),i=oe("path"),r=oe("defs"),s=oe("clipPath"),o=oe("rect"),this.h()},l(a){e=ae(a,"svg",{width:!0,height:!0,viewBox:!0,fill:!0,xmlns:!0});var l=O(e);n=ae(l,"g",{"clip-path":!0});var u=O(n);i=ae(u,"path",{d:!0,fill:!0}),O(i).forEach(E),u.forEach(E),r=ae(l,"defs",{});var d=O(r);s=ae(d,"clipPath",{id:!0});var m=O(s);o=ae(m,"rect",{width:!0,height:!0,fill:!0}),O(o).forEach(E),m.forEach(E),d.forEach(E),l.forEach(E),this.h()},h(){_(i,"d",`M512 97.248C492.96 105.6 472.672 111.136 451.52 113.824C473.28 100.832\r
-      489.888 80.416 497.696 55.808C477.408 67.904 455.008 76.448 431.136\r
-      81.216C411.872 60.704 384.416 48 354.464 48C296.352 48 249.568 95.168\r
-      249.568 152.992C249.568 161.312 250.272 169.312 252 176.928C164.736\r
-      172.672 87.52 130.848 35.648 67.136C26.592 82.848 21.28 100.832 21.28\r
-      120.192C21.28 156.544 40 188.768 67.904 207.424C51.04 207.104 34.496\r
-      202.208 20.48 194.496C20.48 194.816 20.48 195.232 20.48 195.648C20.48\r
-      246.656 56.864 289.024 104.576 298.784C96.032 301.12 86.72 302.24 77.056\r
-      302.24C70.336 302.24 63.552 301.856 57.184 300.448C70.784 342.016 109.376\r
-      372.576 155.264 373.568C119.552 401.504 74.208 418.336 25.12\r
-      418.336C16.512 418.336 8.256 417.952 0 416.896C46.496 446.88 101.6 464\r
-      161.024 464C354.176 464 459.776 304 459.776 165.312C459.776 160.672\r
+import{i as Ct,h as wt,j as xe,k as St,s as ee,n as U,e as Rt,u as Lt,g as $t,f as Pt}from"../chunks/scheduler.5e1763d8.js";import{p as ye,t as P,b as _e,d as $,S as te,i as ne,B as oe,C as ae,j as O,f as E,k as _,a as L,y as N,g as k,s as B,r as J,h as C,x as ue,c as M,u as Q,v as X,w as W,m as j,n as H,o as K,D as ke,e as We,A as Ft}from"../chunks/index.66611e00.js";function Bt(t,e){for(var n=0;n<e.length;n++){const i=e[n];if(typeof i!="string"&&!Array.isArray(i)){for(const r in i)if(r!=="default"&&!(r in t)){const s=Object.getOwnPropertyDescriptor(i,r);s&&Object.defineProperty(t,r,s.get?s:{enumerable:!0,get:()=>i[r]})}}}return Object.freeze(Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}))}function pe(t,e){const n=e.token={};function i(r,s,o,a){if(e.token!==n)return;e.resolved=a;let l=e.ctx;o!==void 0&&(l=l.slice(),l[o]=a);const u=r&&(e.current=r)(l);let d=!1;e.block&&(e.blocks?e.blocks.forEach((m,h)=>{h!==s&&m&&(ye(),P(m,1,1,()=>{e.blocks[h]===m&&(e.blocks[h]=null)}),_e())}):e.block.d(1),u.c(),$(u,1),u.m(e.mount(),e.anchor),d=!0),e.block=u,e.blocks&&(e.blocks[s]=u),d&&St()}if(Ct(t)){const r=wt();if(t.then(s=>{xe(r),i(e.then,1,e.value,s),xe(null)},s=>{if(xe(r),i(e.catch,2,e.error,s),xe(null),!e.hasCatch)throw s}),e.current!==e.pending)return i(e.pending,0),!0}else{if(e.current!==e.then)return i(e.then,1,e.value,t),!0;e.resolved=t}}function je(t,e,n){const i=e.slice(),{resolved:r}=t;t.current===t.then&&(i[t.value]=r),t.current===t.catch&&(i[t.error]=r),t.block.p(i,n)}function le(t){return(t==null?void 0:t.length)!==void 0?t:Array.from(t)}function Mt(t){let e,n;return{c(){e=oe("svg"),n=oe("path"),this.h()},l(i){e=ae(i,"svg",{width:!0,height:!0,viewBox:!0,fill:!0,xmlns:!0});var r=O(e);n=ae(r,"path",{d:!0,fill:!0}),O(n).forEach(E),r.forEach(E),this.h()},h(){_(n,"d",`M256 0.666626C114.56 0.666626 0 113.307 0 252.229C0 363.397 73.344
+    457.669 175.04 490.907C187.84 493.275 192.533 485.488 192.533
+    478.811C192.533 472.837 192.32 457.008 192.213 436.037C121.003 451.205
+    105.984 402.288 105.984 402.288C94.336 373.253 77.504 365.488 77.504
+    365.488C54.3147 349.893 79.296 350.213 79.296 350.213C105.003 351.963
+    118.507 376.133 118.507 376.133C141.333 414.597 178.432 403.483 193.067
+    397.061C195.371 380.784 201.963 369.712 209.28 363.419C152.427 357.125
+    92.672 335.493 92.672 239.109C92.672 211.653 102.592 189.211 119.019
+    171.611C116.139 165.253 107.499 139.675 121.259 105.029C121.259 105.029
+    142.699 98.288 191.659 130.821C212.139 125.232 233.899 122.459 255.659
+    122.331C277.419 122.459 299.179 125.232 319.659 130.821C368.299 98.288
+    389.739 105.029 389.739 105.029C403.499 139.675 394.859 165.253 392.299
+    171.611C408.619 189.211 418.539 211.653 418.539 239.109C418.539 335.749
+    358.699 357.019 301.739 363.205C310.699 370.757 319.019 386.181 319.019
+    409.755C319.019 443.419 318.699 470.469 318.699 478.64C318.699 485.232
+    323.179 493.104 336.299 490.587C438.72 457.563 512 363.227 512 252.229C512
+    113.307 397.376 0.666626 256 0.666626V0.666626Z`),_(n,"fill","#04143A"),_(e,"width",t[0]),_(e,"height",t[1]),_(e,"viewBox","0 0 512 492"),_(e,"fill","none"),_(e,"xmlns","http://www.w3.org/2000/svg")},m(i,r){L(i,e,r),N(e,n)},p(i,[r]){r&1&&_(e,"width",i[0]),r&2&&_(e,"height",i[1])},i:U,o:U,d(i){i&&E(e)}}}function Ut(t,e,n){let{width:i,height:r}=e;return t.$$set=s=>{"width"in s&&n(0,i=s.width),"height"in s&&n(1,r=s.height)},[i,r]}class Vt extends te{constructor(e){super(),ne(this,e,Ut,Mt,ee,{width:0,height:1})}}function qt(t){let e,n,i,r,s,o;return{c(){e=oe("svg"),n=oe("g"),i=oe("path"),r=oe("defs"),s=oe("clipPath"),o=oe("rect"),this.h()},l(a){e=ae(a,"svg",{width:!0,height:!0,viewBox:!0,fill:!0,xmlns:!0});var l=O(e);n=ae(l,"g",{"clip-path":!0});var u=O(n);i=ae(u,"path",{d:!0,fill:!0}),O(i).forEach(E),u.forEach(E),r=ae(l,"defs",{});var d=O(r);s=ae(d,"clipPath",{id:!0});var m=O(s);o=ae(m,"rect",{width:!0,height:!0,fill:!0}),O(o).forEach(E),m.forEach(E),d.forEach(E),l.forEach(E),this.h()},h(){_(i,"d",`M512 97.248C492.96 105.6 472.672 111.136 451.52 113.824C473.28 100.832
+      489.888 80.416 497.696 55.808C477.408 67.904 455.008 76.448 431.136
+      81.216C411.872 60.704 384.416 48 354.464 48C296.352 48 249.568 95.168
+      249.568 152.992C249.568 161.312 250.272 169.312 252 176.928C164.736
+      172.672 87.52 130.848 35.648 67.136C26.592 82.848 21.28 100.832 21.28
+      120.192C21.28 156.544 40 188.768 67.904 207.424C51.04 207.104 34.496
+      202.208 20.48 194.496C20.48 194.816 20.48 195.232 20.48 195.648C20.48
+      246.656 56.864 289.024 104.576 298.784C96.032 301.12 86.72 302.24 77.056
+      302.24C70.336 302.24 63.552 301.856 57.184 300.448C70.784 342.016 109.376
+      372.576 155.264 373.568C119.552 401.504 74.208 418.336 25.12
+      418.336C16.512 418.336 8.256 417.952 0 416.896C46.496 446.88 101.6 464
+      161.024 464C354.176 464 459.776 304 459.776 165.312C459.776 160.672
       459.616 156.192 459.392 151.744C480.224 136.96 497.728 118.496 512 97.248Z`),_(i,"fill","#04143A"),_(n,"clip-path","url(#clip0)"),_(o,"width","512"),_(o,"height","512"),_(o,"fill","white"),_(s,"id","clip0"),_(e,"width",t[0]),_(e,"height",t[1]),_(e,"viewBox","0 0 512 512"),_(e,"fill","none"),_(e,"xmlns","http://www.w3.org/2000/svg")},m(a,l){L(a,e,l),N(e,n),N(n,i),N(e,r),N(r,s),N(s,o)},p(a,[l]){l&1&&_(e,"width",a[0]),l&2&&_(e,"height",a[1])},i:U,o:U,d(a){a&&E(e)}}}function jt(t,e,n){let{width:i,height:r}=e;return t.$$set=s=>{"width"in s&&n(0,i=s.width),"height"in s&&n(1,r=s.height)},[i,r]}class Ht extends te{constructor(e){super(),ne(this,e,jt,qt,ee,{width:0,height:1})}}function Gt(t){let e,n,i=`<h1 class="text-4xl mb-4 md:mr-6 md:text-6xl"><span class="font-bold">Edison</span>
       Torres</h1> <span class="text-2xl bg-blue-200 text-blue-900 px-4 py-2 rounded-lg">Desarrollador de Software</span>`,r,s,o,a,l,u,d,m,h,p=`<strong class="text-blue-900">Desarrollo</strong>
     y diseño de
