@@ -2,8 +2,8 @@
   export let quantity: number,
     title: string,
     description: string,
-    before: string,
-    after: string;
+    before: string = "",
+    after: string = "";
 </script>
 
 <div

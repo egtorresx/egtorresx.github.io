@@ -18,7 +18,7 @@
 
   let achievements = [];
 
-  $: client.request(query).then((data) => (achievements = data.achievements));
+  $: client.request<any>(query).then((data) => (achievements = data.achievements));
 </script>
 
 {#await achievements}
@@ -27,7 +27,7 @@
   </div>
 {:then}
   <div class="flex flex-col justify-evenly md:flex-row">
-    {#each achievements as achievement}
+    {#each achievements as achievement (achievement.title)}
       <div class="flex-1 mr-5 mb-5 md:mb-0">
         <Achievement
           before={achievement.prefix}
