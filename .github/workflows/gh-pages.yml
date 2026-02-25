@@ -1,7 +1,13 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - qa
+      - develop
+      - staging
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -12,7 +18,54 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy 🚀
+      - name: Upload build artifact 📦
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
+
+  deploy-production:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment:
+      name: production
+      url: https://egtorresx.github.io
+    steps:
+      - name: Download build artifact 📦
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
+
+      - name: Deploy to Production 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
+          clean-exclude: |
+            staging/
+
+  deploy-staging:
+    needs: build
+    if: contains(fromJSON('["refs/heads/qa","refs/heads/develop","refs/heads/staging"]'), github.ref)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment:
+      name: staging-${{ github.ref_name }}
+      url: https://egtorresx.github.io/staging/${{ github.ref_name }}
+    steps:
+      - name: Download build artifact 📦
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
+
+      - name: Deploy to Staging 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          target-folder: staging/${{ github.ref_name }}
+          clean: false
