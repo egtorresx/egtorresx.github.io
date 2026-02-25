@@ -22,29 +22,32 @@
   $: client.request<any>(query).then((data) => (jobs = data.jobs.slice(0, 4)));
 </script>
 
-<div class="mt-10">
-  <h2 class="text-2xl font-bold mb-4">Experiencia Laboral</h2>
-  {#await jobs}
-    <Skeleton />
-  {:then}
-    <ul class="steps steps-vertical lg:steps-horizontal">
-      {#each jobs as job (job.startDate)}
-        <li
-          class={"step " + (job.standOutLine ? "step-success" : "step-neutral")}
-          data-content=""
-        >
-          <TimelinePoint
-            description={job.description}
-            startDate={job.startDate}
-            endDate={job.endDate}
-            url={job.url}
-          />
-        </li>
-      {/each}
-    </ul>
-  {:catch error}
-    <Error
-      >No se puede mostrar por el momento sección Experiencia Laboral {error}</Error
-    >
-  {/await}
-</div>
+<section class="mt-16">
+  <h2 class="section-heading">Experiencia Laboral</h2>
+  <div class="mt-8">
+    {#await jobs}
+      <Skeleton />
+    {:then}
+      <ul class="steps steps-vertical lg:steps-horizontal w-full">
+        {#each jobs as job (job.startDate)}
+          <li
+            class={"step " + (job.standOutLine ? "step-primary" : "step-neutral")}
+            data-content=""
+          >
+            <TimelinePoint
+              description={job.description}
+              startDate={job.startDate}
+              endDate={job.endDate}
+              url={job.url}
+            />
+          </li>
+        {/each}
+      </ul>
+    {:catch error}
+      <Error
+        >No se puede mostrar por el momento sección Experiencia Laboral {error}</Error
+      >
+    {/await}
+  </div>
+</section>
+

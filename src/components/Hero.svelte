@@ -3,28 +3,61 @@
   import Twitter from "../icons/Twitter.svelte";
 </script>
 
-<div class="flex flex-col items-center text-center">
-  <div class="flex flex-col md:flex-row mb-5 items-center">
-    <h1 class="text-4xl mb-4 md:mr-6 md:text-6xl">
-      <span class="font-bold">Edison</span>
-      Torres
-    </h1>
-    <span class="text-2xl bg-blue-200 text-blue-900 px-4 py-2 rounded-lg"
-      >Desarrollador de Software</span
-    >
-  </div>
-  <div class="flex mb-4">
-    <a href="http://twitter.com/edisont" class="mr-2">
-      <Twitter width={24} height={24} />
-    </a>
-    <a href="https://github.com/egtorresx/">
-      <GitHub width={24} height={24} />
-    </a>
-  </div>
-  <p class="text-2xl md:text-3xl bg-blue-200 px-6 py-4 rounded-lg md:w-9/12">
-    <strong class="text-blue-900">Desarrollo</strong>
-    y diseño de
-    <strong class="text-blue-900">Software</strong>, tengo experiencia en las
-    areas académica y financiera
+<section class="flex flex-col items-center text-center py-16 md:py-24 animate-fade-in">
+  <!-- Badge -->
+  <span
+    class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium
+           bg-brand-50 text-brand-700 border border-brand-200 tracking-wide"
+  >
+    <span class="h-2 w-2 rounded-full bg-brand-500 animate-pulse"></span>
+    Disponible para proyectos
+  </span>
+
+  <!-- Name & Title -->
+  <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
+    <span class="gradient-text">Edison</span>
+    <span class="text-slate-700"> Torres</span>
+  </h1>
+
+  <p class="text-xl md:text-2xl font-medium text-slate-500 mb-8 tracking-wide">
+    Desarrollador de Software
   </p>
-</div>
+
+  <!-- Description -->
+  <p
+    class="text-lg md:text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed
+           bg-white/70 backdrop-blur-sm border border-slate-200 px-8 py-5 rounded-2xl shadow-card"
+  >
+    <span class="font-semibold text-brand-600">Desarrollo</span>
+    y diseño de
+    <span class="font-semibold text-brand-600">Software</span>, con experiencia
+    en las áreas académica y financiera.
+  </p>
+
+  <!-- Social links -->
+  <div class="flex gap-4">
+    <a
+      href="http://twitter.com/edisont"
+      target="_blank"
+      rel="noreferrer"
+      class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200
+             text-slate-600 hover:text-brand-600 hover:border-brand-300 hover:shadow-card
+             transition-all duration-200 font-medium text-sm"
+    >
+      <Twitter width={18} height={18} />
+      Twitter
+    </a>
+    <a
+      href="https://github.com/egtorresx/"
+      target="_blank"
+      rel="noreferrer"
+      class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200
+             text-slate-600 hover:text-brand-600 hover:border-brand-300 hover:shadow-card
+             transition-all duration-200 font-medium text-sm"
+    >
+      <GitHub width={18} height={18} />
+      GitHub
+    </a>
+  </div>
+</section>
+

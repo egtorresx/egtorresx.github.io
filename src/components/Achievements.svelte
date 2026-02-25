@@ -21,23 +21,25 @@
   $: client.request<any>(query).then((data) => (achievements = data.achievements));
 </script>
 
-{#await achievements}
-  <div class="mt-10">
-    <Skeleton />
-  </div>
-{:then}
-  <div class="flex flex-col justify-evenly md:flex-row">
-    {#each achievements as achievement (achievement.title)}
-      <div class="flex-1 mr-5 mb-5 md:mb-0">
-        <Achievement
-          before={achievement.prefix}
-          quantity={achievement.quantity}
-          title={achievement.title}
-          description={achievement.description}
-        />
+<section class="mt-16">
+  <h2 class="section-heading">Logros</h2>
+  <div class="mt-8">
+    {#await achievements}
+      <Skeleton />
+    {:then}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {#each achievements as achievement (achievement.title)}
+          <Achievement
+            before={achievement.prefix}
+            quantity={achievement.quantity}
+            title={achievement.title}
+            description={achievement.description}
+          />
+        {/each}
       </div>
-    {/each}
+    {:catch error}
+      <Error>No se puede mostrar por el momento sección Logros {error}</Error>
+    {/await}
   </div>
-{:catch error}
-  <Error>No se puede mostrar por el momento sección Logros {error}</Error>
-{/await}
+</section>
+
