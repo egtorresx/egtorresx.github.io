@@ -14,26 +14,36 @@
 
 {#if visible}
   <div
-    class="bg-blue-300 text-blue-900 fixed bottom-0 
-    right-0 w-full md:px-10 md:py-3 px-2 py-1 flex justify-between items-center"
+    class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-xl
+           bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-xl
+           px-5 py-4 flex items-center justify-between gap-4"
   >
-    <span class="text-sm md:text-lg flex-1">
-      ¿Acepta el uso cookies para asegurarse que tenga la mejor experiencia en
-      este sitio web?
+    <p class="text-sm text-slate-600 flex-1">
+      ¿Acepta el uso de cookies para asegurarse de tener la mejor experiencia en
+      este sitio?
       <a
-        class="font-bold text-sm md:text-lg"
+        class="font-semibold text-brand-600 hover:underline underline-offset-2"
         href="https://www.cookiesandyou.com/"
         target="_blank"
         rel="noreferrer">Aprende más</a
       >
-    </span>
-    <div>
-      <button class="btn btn-error btn-sm md:btn-md" on:click={deniedCookies}
-        >No</button
+    </p>
+    <div class="flex gap-2 shrink-0">
+      <button
+        class="px-4 py-1.5 rounded-lg text-sm font-medium border border-slate-200
+               text-slate-500 hover:bg-slate-100 transition-colors duration-150"
+        on:click={deniedCookies}
       >
-      <button class="btn btn-success btn-sm md:btn-md" on:click={acceptCookies}
-        >Si</button
+        No
+      </button>
+      <button
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold
+               bg-gradient-brand text-white hover:opacity-90 transition-opacity duration-150"
+        on:click={acceptCookies}
       >
+        Aceptar
+      </button>
     </div>
   </div>
 {/if}
+

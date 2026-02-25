@@ -26,38 +26,39 @@
 </script>
 
 <!-- Skills and interest section -->
-<div class="mt-10">
+<section class="mt-16">
   {#await skills}
     <Skeleton />
   {:then}
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row gap-10">
       <div class="flex-1">
-        <h2 class="text-2xl font-bold">Habilidades</h2>
-        {#each acquiredSkills as skill (skill.title)}
-          <div class="my-5">
+        <h2 class="section-heading">Habilidades</h2>
+        <div class="mt-8 flex flex-col gap-4">
+          {#each acquiredSkills as skill (skill.title)}
             <Skill
               experience={skill.experience}
               title={skill.title}
               description={skill.description}
             />
-          </div>
-        {/each}
+          {/each}
+        </div>
       </div>
       <div class="flex-1">
-        <h2 class="text-2xl font-bold">Actualmente aprendiendo</h2>
-        {#each learningSkills as skill (skill.title)}
-          <div class="my-5">
+        <h2 class="section-heading">Aprendiendo</h2>
+        <div class="mt-8 flex flex-col gap-4">
+          {#each learningSkills as skill (skill.title)}
             <Skill
               experience={skill.experience}
               title={skill.title}
               description={skill.description}
             />
-          </div>
-        {/each}
+          {/each}
+        </div>
       </div>
     </div>
   {:catch error}
     <Error>No se puede mostrar por el momento sección Habilidades {error}</Error
     >
   {/await}
-</div>
+</section>
+
