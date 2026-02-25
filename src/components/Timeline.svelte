@@ -19,7 +19,7 @@
 
   let jobs = [];
 
-  $: client.request(query).then((data) => (jobs = data.jobs.slice(0, 4)));
+  $: client.request<any>(query).then((data) => (jobs = data.jobs.slice(0, 4)));
 </script>
 
 <div class="mt-10">
@@ -28,13 +28,12 @@
     <Skeleton />
   {:then}
     <ul class="steps steps-vertical lg:steps-horizontal">
-      {#each jobs as job}
+      {#each jobs as job (job.startDate)}
         <li
           class={"step " + (job.standOutLine ? "step-success" : "step-neutral")}
           data-content=""
         >
           <TimelinePoint
-            line={job.standOutLine}
             description={job.description}
             startDate={job.startDate}
             endDate={job.endDate}

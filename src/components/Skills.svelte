@@ -19,7 +19,7 @@
   let acquiredSkills = [];
   let learningSkills = [];
 
-  $: skills = client.request(query).then((data) => {
+  $: skills = client.request<any>(query).then((data) => {
     acquiredSkills = data.skills.filter((skill) => skill.type === "Acquired");
     learningSkills = data.skills.filter((skill) => skill.type === "Learning");
   });
@@ -33,7 +33,7 @@
     <div class="flex flex-col md:flex-row">
       <div class="flex-1">
         <h2 class="text-2xl font-bold">Habilidades</h2>
-        {#each acquiredSkills as skill}
+        {#each acquiredSkills as skill (skill.title)}
           <div class="my-5">
             <Skill
               experience={skill.experience}
@@ -45,7 +45,7 @@
       </div>
       <div class="flex-1">
         <h2 class="text-2xl font-bold">Actualmente aprendiendo</h2>
-        {#each learningSkills as skill}
+        {#each learningSkills as skill (skill.title)}
           <div class="my-5">
             <Skill
               experience={skill.experience}
