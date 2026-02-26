@@ -7,7 +7,7 @@
 
   let query = gql`
     {
-      achievements {
+      achievements(orderBy: order_ASC) {
         title
         description
         quantity
@@ -18,7 +18,9 @@
 
   let achievements = [];
 
-  $: client.request<any>(query).then((data) => (achievements = data.achievements));
+  $: client
+    .request<any>(query)
+    .then((data) => (achievements = data.achievements));
 </script>
 
 <section class="mt-16">
@@ -42,4 +44,3 @@
     {/await}
   </div>
 </section>
-

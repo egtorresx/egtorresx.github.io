@@ -7,11 +7,12 @@
 
   let query = gql`
     {
-      skills {
+      skills(orderBy: order_ASC) {
         title
         description
         experience
         type
+        order
       }
     }
   `;
@@ -61,4 +62,3 @@
     >
   {/await}
 </section>
-
