@@ -30,15 +30,15 @@
     </p>
     <div class="flex gap-2 shrink-0">
       <button
-        class="px-4 py-1.5 rounded-lg text-sm font-medium border border-slate-200
-               text-slate-500 hover:bg-slate-100 transition-colors duration-150"
+        class="px-4 py-1.5 rounded-lg text-sm font-medium border border-danger
+               text-danger hover:bg-danger/10 transition-colors duration-150"
         on:click={deniedCookies}
       >
         No
       </button>
       <button
         class="px-4 py-1.5 rounded-lg text-sm font-semibold
-               bg-gradient-brand text-white hover:opacity-90 transition-opacity duration-150"
+               bg-success text-white hover:opacity-90 transition-opacity duration-150"
         on:click={acceptCookies}
       >
         Aceptar

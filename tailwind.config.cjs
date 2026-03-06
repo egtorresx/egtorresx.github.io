@@ -9,30 +9,40 @@ const config = {
       },
       colors: {
         brand: {
-          50: "#f0f4ff",
-          100: "#e0e9ff",
-          200: "#c4d4ff",
-          300: "#93afff",
-          400: "#6089fc",
-          500: "#3b64f8",
-          600: "#2245ee",
-          700: "#1a32da",
-          800: "#1b2cb1",
-          900: "#1c2b8b",
-          950: "#151d5a",
+          50: "#EFF4FF",
+          100: "#DDEAFF",
+          200: "#BBD4FF",
+          300: "#88B2FF",
+          400: "#5590FF",
+          500: "#256EFF",
+          600: "#1355D4",
+          700: "#0D3EA8",
+          800: "#0A2D7A",
+          900: "#071E52",
+          950: "#030F2A",
         },
         accent: {
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
+          400: "#9a6dd0",
+          500: "#6a3aad",
+          600: "#46237A",
+        },
+        success: {
+          DEFAULT: "#3DDC97",
+          light: "#a8f0d0",
+          dark: "#1fad6b",
+        },
+        danger: {
+          DEFAULT: "#FF495C",
+          light: "#ffc0c6",
+          dark: "#cc1f30",
         },
       },
       backgroundImage: {
-        "gradient-brand": "linear-gradient(135deg, #2245ee 0%, #7c3aed 100%)",
+        "gradient-brand": "linear-gradient(135deg, #256EFF 0%, #46237A 100%)",
       },
       boxShadow: {
-        card: "0 4px 24px 0 rgba(34,69,238,0.08)",
-        "card-hover": "0 8px 40px 0 rgba(34,69,238,0.16)",
+        card: "0 4px 24px 0 rgba(37,110,255,0.08)",
+        "card-hover": "0 8px 40px 0 rgba(37,110,255,0.16)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out",
@@ -51,7 +61,18 @@ const config = {
   ],
 
   daisyui: {
-    themes: ["light"],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "primary": "#256EFF",
+          "secondary": "#46237A",
+          "success": "#3DDC97",
+          "error": "#FF495C",
+          "base-100": "#FCFCFC",
+        },
+      },
+    ],
   },
 };
 
