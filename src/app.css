@@ -19,7 +19,7 @@
 @layer utilities {
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #2245ee 0%, #7c3aed 100%);
+    background-image: linear-gradient(135deg, #256EFF 0%, #46237A 100%);
   }
 
   .section-heading {
@@ -29,6 +29,6 @@
   .section-heading::after {
     content: "";
     @apply absolute left-0 -bottom-2 h-1 w-12 rounded-full;
-    background-image: linear-gradient(135deg, #2245ee 0%, #7c3aed 100%);
+    background-image: linear-gradient(135deg, #256EFF 0%, #46237A 100%);
   }
 }
