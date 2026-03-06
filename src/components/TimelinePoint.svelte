@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class="text-center max-w-xs">
+<div class="text-start lg:text-center max-w-xs">
   {#if url}
     <a
       class="font-semibold text-brand-600 hover:text-brand-800 hover:underline
