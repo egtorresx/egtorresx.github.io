@@ -63,6 +63,7 @@
               <div class="lg:mt-5 w-full">
                 <TimelinePoint
                   description={job.description}
+                  standOutLine={job.standOutLine}
                   startDate={job.startDate}
                   endDate={job.endDate}
                   url={job.url}

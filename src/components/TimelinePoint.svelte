@@ -1,5 +1,6 @@
 <script lang="ts">
   export let description: string,
+    standOutLine: boolean,
     startDate: string,
     endDate: string,
     url: string;
@@ -16,14 +17,18 @@
 <div class="text-start lg:text-center max-w-xs">
   {#if url}
     <a
-      class="font-semibold text-brand-600 hover:text-brand-800 hover:underline
-             underline-offset-2 transition-colors duration-150 text-sm leading-snug block"
+      class={"font-semibold hover:underline underline-offset-2 transition-colors duration-150 text-sm leading-snug block " +
+        (standOutLine
+          ? "text-brand-600 hover:text-brand-800"
+          : "text-slate-800 hover:text-slate-600")}
       href={url}
       target="_blank"
       rel="noreferrer">{description}</a
     >
   {:else}
-    <span class="font-semibold text-slate-700 text-sm leading-snug block"
+    <span
+      class={"font-semibold text-sm leading-snug block " +
+        (standOutLine ? "text-brand-600" : "text-slate-800")}
       >{description}</span
     >
   {/if}
